@@ -12,7 +12,7 @@ const loop = setInterval(() => {
    
     const pipePosition = pipe.offsetLeft;
     const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
-    const pontos = +document.querySelector('.pontos').innerHTML ;
+    const pontos = +document.querySelector('.pontos').innerHTML;
     const valorPontos = document.querySelector('.pontos');
     if(pipePosition <= 120 && pipePosition > 0  && marioPosition < 80){
         pipe.style.animation = 'none';
