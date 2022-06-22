@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Press+Start+2P&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +8,7 @@
 body{
     background: green;
     overflow: hidden;
+    font-family: 'Press Start 2P', cursive;
 }
 
 .game-board{
@@ -40,22 +42,19 @@ body{
     width: 550px;
     animation: clouds 20s infinite linear;
 }
+
 .pontos{
     position: absolute;
-    width: 80px;
+    width: 70px;
+    height: 70px;
+    padding-left: 10px;
+    padding-top: 20px;
     border: 2px solid yellow;
-    border-radius: 20px;
-    font-size: 30pt;
-    text-align: center;
+    border-radius: 35px;
+    font-size: 20pt;
     right: 5%;
     top: 4%;
     background-color: yellow;
-}
-.grama{
-    position: absolute;
-    width: 60px;
-    bottom: -10px;
-    /*animation: grama_animation 5s infinite ease-out;*/
 }
 
 .reload:hover{
@@ -70,7 +69,8 @@ body{
     position: absolute;
     width: 240px;
     height: 60px;
-    font-size: 30pt;
+    font-size: 15pt;
+    font-family: 'Press Start 2P', cursive;
     text-decoration: none;
     color: rgb(108, 0, 0);
     background: rgb(162, 195, 0);

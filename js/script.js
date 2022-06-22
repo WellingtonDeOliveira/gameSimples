@@ -28,7 +28,11 @@ const loop = setInterval(() => {
     }
     if(pipePosition < 40 && pipePosition > 0 && marioPosition > 0){
         setTimeout(()=>{
-            valorPontos.innerHTML = `${pontos+1}`;
+            if(pontos < 9){
+                valorPontos.innerHTML = `0${pontos+1}`;
+            }else{
+                valorPontos.innerHTML = `${pontos+1}`;
+            }
         }, 50);
     }
 }, 10);
