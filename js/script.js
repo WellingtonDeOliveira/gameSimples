@@ -1,7 +1,17 @@
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
-const button = document.querySelector('.reload');
+const pai = document.querySelector('.game-board');
+const button = document.createElement('button');
+const texto =  document.createTextNode('Reiniciar');
+button.appendChild(texto);
+button.classList.add('reload');
 button.style.display = 'none';
+
+const evento = document.createAttribute("onClick");
+evento.value = "window.location.reload(true)";
+button.attributes.setNamedItem(evento);
+pai.appendChild(button);
+
 const junp = () => {
     mario.classList.add('junp');
 
