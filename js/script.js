@@ -26,7 +26,7 @@ const loop = setInterval(() => {
     if(pipePosition <= 120 && pipePosition > 0 && marioPosition == 180 ){
         setTimeout(() => {
             valorPontos.innerHTML = `${pontos+1}`;
-        }, 80); 
+        }, 60); 
     }
 }, 10);
 document.addEventListener('keydown', junp);     
