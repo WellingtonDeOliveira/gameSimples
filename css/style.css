@@ -61,8 +61,19 @@ body{
     background: rgb(117, 140, 1);
 }
 
-.button{
+.painel{
     display: none;
+}
+
+.tela-reload{
+    position: absolute;
+    width: 300px;
+    left: 40%;
+    top: 15%;
+    height: 300px;
+    color: rgb(179, 175, 175);
+    background: linear-gradient(#001c48, #4f0000);
+    padding-top: 10%;
 }
 
 .reload{
@@ -75,16 +86,31 @@ body{
     color: rgb(108, 0, 0);
     background: rgb(162, 195, 0);
     border-radius: 10px;
-    top: 40%;
-    right: 45%;
+    left: 10%;
+    bottom: 50%;
 }
 
-.plataforma{
+
+.title{
+    position: absolute;
+    font-size: 10pt;
+    left: 14%;
+    bottom: 40%;
+}
+
+.melhor{
+    position: absolute;
+    font-size: 25pt;
+    left: 45%;
+    bottom: 20%;
+}
+
+/*.plataforma{
     position: absolute;
     width: 125%;
     top: 320px;
     left: -160px;
-}
+}*/
 
 /*@keyframes grama_animation{
     from{
@@ -131,4 +157,3 @@ body{
         right: 100%;
     }
 }
-
