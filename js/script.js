@@ -3,6 +3,7 @@ const pipe = document.querySelector('.pipe');
 const pontuacao = document.querySelector('.melhor');
 const painel = document.getElementById('evento');
 let melhor_pontu = 0;
+let testes = melhor_pontu;
 const junp = () => {
     mario.classList.add('junp');
 
@@ -32,6 +33,39 @@ const loop = setInterval(() => {
         mario.style.marginLeft = '50px';
         clearInterval(loop);
     }
+    if(pipePosition <= 20){
+        if(testes == 3){
+            pipe.style.animation = 'pipe_animation 1.8s infinite linear';
+            pipe.style.display = 'none';
+            testes = testes+1;
+        }else if(testes == 6){
+            pipe.style.animation = 'pipe_animation 1.6s infinite linear';
+            pipe.style.display = 'none';
+            testes = testes+1;
+        } else if(testes == 9){
+            pipe.style.animation = 'pipe_animation 1.4s infinite linear';
+            pipe.style.display = 'none';
+            testes = testes+1;
+        } else if(testes == 12){
+            pipe.style.animation = 'pipe_animation 1.2s infinite linear';
+            pipe.style.display = 'none';
+            testes = testes+1;
+        } else if(testes == 14){
+            pipe.style.animation = 'pipe_animation 1s infinite linear';
+            pipe.style.display = 'none';
+            testes = testes+1;
+        } else if(testes == 16){
+            pipe.style.animation = 'pipe_animation 0.8s infinite linear';
+            pipe.style.display = 'none';
+            testes = testes+1;
+        } else if(testes == 18){
+            pipe.style.animation = 'pipe_animation 0.7s infinite linear';
+            pipe.style.display = 'none';
+            testes = testes+1;
+        }else {
+            pipe.style.display = '';
+        }
+    }
     if(pipePosition < 40 && pipePosition > 0 && marioPosition > 0){
         setTimeout(()=>{
             if(pontos < 9){
@@ -39,7 +73,8 @@ const loop = setInterval(() => {
             }else{
                 valorPontos.innerHTML = `${pontos+1}`;
             }
-            melhor_pontu = +document.querySelector('.pontos').innerHTML; 
+            melhor_pontu = +document.querySelector('.pontos').innerHTML;
+            testes = melhor_pontu;
         }, 50);
     }
 }, 10);
