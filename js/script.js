@@ -1,6 +1,8 @@
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
-const button = document.getElementById('evento');
+const pontuacao = document.querySelector('.melhor');
+const painel = document.getElementById('evento');
+let melhor_pontu = 0;
 const junp = () => {
     mario.classList.add('junp');
 
@@ -21,8 +23,12 @@ const loop = setInterval(() => {
         mario.style.bottom = `${marioPosition}px`;
         mario.src = './midia/game-over.png';
         mario.style.width = '75px';
-        button.classList.remove('button');
-        button.classList.add('reload');
+        if(melhor_pontu > localStorage.getItem('pontos')){
+            localStorage.setItem('pontos', JSON.stringify(melhor_pontu));
+        }
+        pontuacao.innerHTML = localStorage.getItem('pontos');
+        painel.classList.remove('painel');
+        painel.classList.add('tela-reload');
         mario.style.marginLeft = '50px';
         clearInterval(loop);
     }
@@ -33,6 +39,7 @@ const loop = setInterval(() => {
             }else{
                 valorPontos.innerHTML = `${pontos+1}`;
             }
+            melhor_pontu = +document.querySelector('.pontos').innerHTML; 
         }, 50);
     }
 }, 10);
